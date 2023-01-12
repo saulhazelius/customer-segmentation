@@ -17,7 +17,7 @@ if __name__ == '__main__':
     endpoint = sm.describe_endpoint(EndpointName=app_name)
     print("Endpoint status: ", endpoint["EndpointStatus"])
     # Load preprocess objects
-    dv, sc, pca, X_pca = load_data()
+    dv, sc, pca, _ = load_data()
     # Predict from json
     json_path = 'customer.json'
     try:
